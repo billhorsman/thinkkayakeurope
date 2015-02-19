@@ -1,0 +1,34 @@
+!!! 5
+%html
+  %head
+    %title Think Kayak Europe
+    %meta{ name: "author", content: "Micky McDonald" }
+    %meta{ name: "description", content: "Think Kayaks and Surf Skis in Europe" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", media: "all"
+    <!--[if lt IE 9]>
+    = javascript_include_tag "html5shiv"
+    <![endif]-->
+    = csrf_meta_tags
+  %body{ class: "#{controller.class.name.underscore.gsub("/", "_").gsub(/_controller\Z/, '')} _#{controller.action_name}" }
+
+    .page-loader
+      .spinner
+        %i.fa.fa-fw.fa-spinner.fa-spin
+
+    #wrap
+
+      %header
+      .container
+        .row
+          .col-md-12
+            %h1
+              Think Kayak Europe
+
+      = yield
+
+    #footer
+      .container
+        = render 'layouts/footer'

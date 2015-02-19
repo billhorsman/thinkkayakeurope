@@ -1,0 +1,87 @@
+@import 'includes';
+
+article.contact {
+  margin: 0 0 20px;
+  @include clearfix;
+  img {
+    border-radius: 50%;
+    float: left;
+    height: 150px;
+    width: 150px;
+  }
+  p,
+  h2 {
+    margin-left: 170px;
+  }
+  @media(max-width: $screen-xs-max) {
+    text-align: center;
+    img {
+      float: none;
+      margin: 0 auto;
+    }
+    p,
+    h2 {
+      margin-left: 0;
+    }
+  }
+}
+@mixin scale-image($scale) {
+  $v-margin: 132px * (1 - $scale) / 2;
+  width: 1024px * $scale;
+  margin: $v-margin auto;
+  height: 132px * $scale;
+  @media(max-width: $screen-md-max) {
+    $width: 840px;
+    $height: 132px * ($width / 1024px);
+    $v-margin: $height * (1 - $scale) / 2;
+    width: $width * $scale;
+    margin: $v-margin auto;
+    height: $height * $scale;
+  }
+  @media(max-width: $screen-sm-max) {
+    $width: 700px;
+    $height: 132px * ($width / 1024px);
+    $v-margin: $height * (1 - $scale) / 2;
+    width: $width * $scale;
+    margin: $v-margin auto;
+    height: $height * $scale;
+  }
+  @media(max-width: $screen-xs-max) {
+    height: auto;
+    margin: 0;
+    width: 100%;
+  }
+}
+section.boats {
+  margin: 0 0 20px;
+}
+article.boat {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0 0 0;
+  text-align: center;
+  &:last-child {
+    border: none;
+  }
+  h2 {
+    margin: 0;
+    text-align: left;
+    span {
+      font-weight: bold;
+    }
+  }
+  &.eze img {
+    @include scale-image(520 / 645);
+  }
+  &.ace img {
+    @include scale-image(538 / 645);
+  }
+  &.evo-ii img {
+    @include scale-image(625 / 645);
+  }
+  &.ion img {
+    @include scale-image(642 / 645);
+  }
+  &.uno-max img {
+    @include scale-image(1);
+  }
+}

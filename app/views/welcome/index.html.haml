@@ -1,0 +1,23 @@
+.container
+  %article.contact
+    = image_tag "micky.jpg"
+    %h2 Micky McDonald
+    %p
+      %i.fa.fa-fw.fa-phone
+      +44 131 618 9936
+    %p
+      %i.fa.fa-fw.fa-envelope
+      micky[at]thinkkayakeurope.com
+
+.jumbotron
+  .container
+    %p Think Kayaks in Europe - high performance surf skis
+
+.container
+  %section.boats
+    - %w[eze ace evo-ii ion uno-max].each do |boat|
+      %article.boat{ class: boat }
+        %h2
+          %span think
+          = t boat, scope: :boat
+        = image_tag "#{boat}-side-1024x132.png", class: "img-responsive"

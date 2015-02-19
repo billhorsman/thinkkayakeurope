@@ -19,5 +19,7 @@
       %article.boat{ class: boat }
         %h2
           %span think
-          = t boat, scope: :boat
+          = t boat, scope: [:boat, :name]
         = image_tag "#{boat}-side-1024x132.png", class: "img-responsive"
+        = image_tag "#{boat}-top-1024x132.png", class: "img-responsive"
+        %p= raw t boat, scope: [:boat, :description]

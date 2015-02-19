@@ -57,7 +57,7 @@ section.boats {
 }
 article.boat {
   border-bottom: 1px solid #eee;
-  padding: 20px 0 0 0;
+  padding: 20px 0 0 10px;
   text-align: center;
   &:last-child {
     border: none;
@@ -68,6 +68,10 @@ article.boat {
     span {
       font-weight: bold;
     }
+  }
+  p {
+    margin: 10px 0;
+    text-align: justify;
   }
   &.eze img {
     @include scale-image(520 / 645);

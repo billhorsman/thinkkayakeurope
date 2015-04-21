@@ -13,6 +13,7 @@
     = javascript_include_tag "html5shiv"
     <![endif]-->
     = csrf_meta_tags
+    %link{ rel: "icon", type: "image/ico", href: image_path("favicon.png") }
   %body{ class: "#{controller.class.name.underscore.gsub("/", "_").gsub(/_controller\Z/, '')} _#{controller.action_name}" }
 
     .page-loader

@@ -1,5 +1,35 @@
 @import 'includes';
 
+.jumbotron {
+  background-color: #514640;
+  background-image: asset-url('paddler.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  .caption {
+    bottom: 20px;
+    color: white;
+    position: absolute;
+    right: 30px;
+    text-align: right;
+    text-shadow: 0 0 1px black;
+  }
+  @media(max-width: $screen-sm-max) {
+    .container {
+      padding: 0;
+    }
+    .caption {
+      margin-top: 270px;
+      position: static;
+      text-align: center;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
 article.contact {
   margin: 0 0 20px;
   @include clearfix;

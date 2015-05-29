@@ -118,4 +118,8 @@ article.boat {
   &.uno-max img {
     @include scale-image(1);
   }
+  .cta {
+    margin: 0 0 20px;
+    text-align: right;
+  }
 }

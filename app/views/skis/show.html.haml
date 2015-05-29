@@ -1,0 +1,16 @@
+- set_meta_tags title: "Think #{t(@boat, scope: [:boat, :title])}", description: t(@boat, scope: [:boat, :description])
+.container.return
+  = link_to root_path, class: "btn btn-default" do
+    %i.fa.fa-fw.fa-arrow-left
+    back
+
+.container
+  %section.boats
+    %article.boat{ class: @boat }
+      %h2
+        %span think
+        = raw t @boat, scope: [:boat, :name]
+      = image_tag "#{@boat}-side-1024x132.png", class: "img-responsive"
+      = image_tag "#{@boat}-top-1024x132.png", class: "img-responsive"
+
+  = render @boat.sub('-', '_')

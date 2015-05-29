@@ -1,10 +1,7 @@
 !!! 5
 %html
   %head
-    %title Think Kayak Europe
-    %meta{ name: "author", content: "Micky McDonald" }
-    %meta{ name: "description", content: "Think Kayaks and Surfskis in Europe" }
-    %meta{ name: "keywords", content: "surf ski kayak boat" }
+    = display_meta_tags site: "Think Kayaks in Europe", title: "Welcome", author: "Micky McDonald", description: "Think Kayaks and Surfskis in Europe", keywords: "surf ski kayak boat", reverse: true
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
@@ -27,7 +24,8 @@
         .row
           .col-md-12
             %h1
-              Think Kayak Europe
+              = link_to root_path do
+                Think Kayak Europe
 
       = yield
 

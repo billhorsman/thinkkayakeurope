@@ -1,23 +1,20 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  boat:
+    title:
+      eze: "Eze"
+      ace: "Ace"
+      evo-ii: "Evo II"
+      ion: "Ion"
+      uno-max: "Uno Max"
+    name:
+      eze: "eze"
+      ace: "ace"
+      evo-ii: "evo<sup>II</sup>"
+      ion: "ion"
+      uno-max: "uno max"
+    description:
+      eze: "The eze is fast, fun and sporty yet manoeverable, stable and forgiving. Aimed at smaller paddlers up to 80kg."
+      ace: "The ace is fast and fun and our most stable ski."
+      evo-ii: "The ultimate balance of speed and comfort, the evo II is a competitive ski with excellent glide."
+      ion: "An advanced ski designed for speed, stability and big water. Smooth upwind ride and razor sharp downwind performance."
+      uno-max: "The world's fastest surfski, the uno max is capable of winning a race no matter what the conditions."

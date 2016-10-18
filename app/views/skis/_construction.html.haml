@@ -1,19 +1,22 @@
+- pounds = (dollars * 0.82 / 5).round * 5
+- euros = (dollars * 0.91 / 5).round * 5
 %section.construction{ class: type }
   %h3
     %code= code
   %p.price
-    %span &pound;#{pounds}
+    %span &pound;#{number_with_delimiter pounds}
     %span.or or
-    %span &euro;#{euros}
+    %span &euro;#{number_with_delimiter euros}
   %p.name
     %strong= type.to_s.titleize
     Construction
-    %span.weight (#{weight}kg)
   %p.materials
     - case type
     - when :performance
-      (Fibreglass, Coremat, Epoxy, Vacuum)
+      (Lantor Core, Fibreglass, Carbon Kevlar)
+    - when :river
+      (Lantor Core, Carbon Kevlar)
     - when :elite
-      (Kevlar, Carbon, Honeycomb, Epoxy, Vacuum)
+      (Honeycomb Core, Carbo Kevlar)
     - when :ultimate
-      (Carbon, Kevlar, Carbon, Honeycomb, Epoxy, Vacuum)
+      (Honeycomb Core, Carbo Kevlar)

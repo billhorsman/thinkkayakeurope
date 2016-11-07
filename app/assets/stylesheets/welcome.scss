@@ -109,7 +109,7 @@ article.boat {
   &.ace img {
     @include scale-image(538 / 645);
   }
-  &.evo-ii img {
+  &.evo img {
     @include scale-image(625 / 645);
   }
   &.ion img {

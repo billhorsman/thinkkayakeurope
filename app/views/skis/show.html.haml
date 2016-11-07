@@ -10,7 +10,7 @@
       %h2
         %span think
         = raw t @boat, scope: [:boat, :name]
-      = image_tag "#{@boat}-side-1024x132.png", class: "img-responsive"
-      = image_tag "#{@boat}-top-1024x132.png", class: "img-responsive"
+      = image_tag "#{@boat}-side.png", class: "img-responsive"
+      = image_tag "#{@boat}-top.png", class: "img-responsive"
 
   = render @boat.sub('-', '_')

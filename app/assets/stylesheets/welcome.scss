@@ -3,7 +3,7 @@
 .jumbotron {
   background-color: #514640;
   background-image: image-url('paddler.jpg');
-  background-position: center center;
+  background-position: 75% center;
   background-size: cover;
   height: 400px;
   position: relative;
@@ -20,7 +20,9 @@
       padding: 0;
     }
     .caption {
-      margin-top: 270px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 215px;
       position: static;
       text-align: center;
     }

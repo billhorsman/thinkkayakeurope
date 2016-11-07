@@ -104,7 +104,7 @@ article.boat {
     text-align: justify;
   }
   &.eze img {
-    @include scale-image(520 / 645);
+    @include scale-image(518 / 645);
   }
   &.ace img {
     @include scale-image(538 / 645);
@@ -114,6 +114,9 @@ article.boat {
   }
   &.ion img {
     @include scale-image(642 / 645);
+  }
+  &.uno img {
+    @include scale-image(1);
   }
   &.uno-max img {
     @include scale-image(1);
